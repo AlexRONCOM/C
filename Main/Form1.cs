@@ -85,12 +85,6 @@ namespace Main
 
             return false;
         }
-
-        private void sipLabelButtonSignUP_Paint(object sender, PaintEventArgs e)
-        {
-           //TBC 
-        }
-
         private void sipMessageErrorEmail_Click(object sender, EventArgs e)
         {
 
