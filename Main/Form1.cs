@@ -155,6 +155,8 @@ namespace Main
             sipEmailMinCharError.Visible = false;
             sipPassInvalidChar.Visible = false;
             sipPassMinError.Visible = false;
+
+            //test for github
         }
     }
 }
