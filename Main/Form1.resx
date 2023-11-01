@@ -121,7 +121,7 @@
   <data name="sipEmailIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        cwAAAHMBY8FD/gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHDSURBVDhPYxgc
+        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHDSURBVDhPYxgc
         oC/+Q3JL2ruKivx35fkVb8rTG1+Vx7S/Kg+Z8Lzcc8bTcruFT8vNVj4u1930sFxp18Ny8UP3K/lP3ksG
         a17o/zlkavjHyV0JH1XBAkQApT1P1CQO35vCf/puMMNKty8l/xn+M04P+1hPjCFmK56o6Wx82MDw/z+j
         xMF7JQybbb+UgiRAhkwL/VjXH/tGE6wSC/CZ8VjVfsHTRoaG/0wgvvLOB6UM+0y+gQ0AAXyGRHW9Ug2e
@@ -135,7 +135,7 @@
   <data name="sipPassIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        cwAAAHMBY8FD/gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGqSURBVDhPfZE7
+        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGqSURBVDhPfZE7
         S11REIWXtgmkMFWqYGUKQYOGNL5AUBAfIYWSQmKKgzZXU4jaaaNWPoqrYqFWeRUxIF4Jh6BFxBT5ATam
         VEzyH5bf0c3xgvu6YBUze9bMrNmK4bf86Je8cSifH8Bv8voXcuH5fliuPpGPEKf7cutXue2j/GNbPpzl
         LZRVxjEixH+/yw9CSkX54br8b0luCanKOJLHWDsNYY5lcou8hbAyEBd25VIIcyyQw0IhhJWB5wKe7zRA
@@ -193,7 +193,7 @@
         m10DywfODjoMXrjleuvyba/b1++svDMwFDJ0dzhyeOQu++7kvaR7L+9n3J9/sOkh+mHhI6lH5Y+VHtf9
         qPdj64jlyJlR19G+J0FPHoyxxp7/lP7Th/H8p+Sn5ROqE42TZpOnp9ynbj5b/Wz8eerz+emCn6V/rn6h
         ++K7Xxx/6ZtZNTP+kv9y4dfiV/Kvjrxe9rp71n/28ZvkN/NzhW/l3x59x3jX+z7s/cR85gfsh4qPeh+7
-        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAAsQAAALEAGtI711AAD1RUlEQVR4Xuz9B4Bb5Zno/4vQ
+        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAAsMAAALDAE/QCLIAAD1RUlEQVR4Xuz9B4Bb5Zno/4vQ
         TDPYozIz9nRJM25Adu/NrXt/u/+7d7Ob3SS7IZtAqG4Y3AADbpBQQja0JQRIAqSQQrFxnd7H4ylu4+m9
         e9x7ryOdc/7P+77nvHr1HOnM0YxGkgHd7+oeFTc8jvXx2yzK3cp4ddcYk5W7JBpcsIeyfJfkvXv40qyz
         Z6YfPjZt30H3wCF33yF3z6GsvsNZA4ezBnmHMgdG7EBWgPZn9gds30jtdfdpwbXanky1QXffoLvXoAF3

@@ -15,7 +15,7 @@ namespace Main
         public MainPage()
         {
             InitializeComponent();
-            
+            StartConfig();            
         }
 
         private void StartConfig()
@@ -24,6 +24,11 @@ namespace Main
             sipEmailMinCharError.Visible = false;
             sipPassInvalidChar.Visible = false;
             sipPassMinError.Visible = false;
+
+            sipSignUpButton.FlatStyle = FlatStyle.Flat;
+            sipSignUpButton.BackColor = Color.Transparent;
+            sipSignUpButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            sipSignUpButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
 
         private void MainPage_Load(object sender, EventArgs e)
@@ -48,7 +53,7 @@ namespace Main
 
         private void sipPassBox_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void sipEmailBox_TextChanged(object sender, EventArgs e)
@@ -56,10 +61,10 @@ namespace Main
 
         }
 
-       private bool CheckEmail(string text) 
+        private bool CheckEmail(string text)
         {
             char[] chars = text.ToCharArray();
-            foreach (char c in chars) 
+            foreach (char c in chars)
             {
                 if (c == '@')
                 {
@@ -73,7 +78,7 @@ namespace Main
 
         private bool AntiSQLInjection(string text)
         {
-            char[] caractereSQLInjection = { '\'', '"', ';', '-', '-', '/', '*', '='};
+            char[] caractereSQLInjection = { '\'', '"', ';', '-', '-', '/', '*', '=' };
 
             foreach (char caracter in text)
             {
@@ -85,6 +90,21 @@ namespace Main
 
             return false;
         }
+        private bool OnlyNumbers(string text)
+        {
+           /* char[] onlynumb = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+            foreach(char number  in onlynumb)
+            {
+                for (int i = 0; i < text.Length; i++)
+                {
+                   
+                }
+            }
+           */
+            return true;
+        }
+
         private void sipMessageErrorEmail_Click(object sender, EventArgs e)
         {
 
@@ -103,6 +123,38 @@ namespace Main
         private void sipPassMinError_Click(object sender, EventArgs e)
         {
 
+        }
+
+        // Sign Up Button (Panel) //
+
+        private void sipSignUpButton_Click(object sender, EventArgs e)
+        {
+
+            if (sipEmailBox.Text.Length <= 3)
+            {
+                sipEmailMinCharError.Visible = true;
+                sipMessageErrorEmail.Visible = false;
+                return;
+            }
+
+            if (AntiSQLInjection(sipEmailBox.Text) == true)
+            {
+                sipEmailMinCharError.Visible = false;
+                sipMessageErrorEmail.Visible = true;
+                return;
+            }
+
+            if (CheckEmail(sipEmailBox.Text) == false)
+            {
+                sipEmailMinCharError.Visible = false;
+                sipMessageErrorEmail.Visible = true;
+                return;
+            }
+
+            sipMessageErrorEmail.Visible = false;
+            sipEmailMinCharError.Visible = false;
+            sipPassInvalidChar.Visible = false;
+            sipPassMinError.Visible = false;
         }
     }
 }
