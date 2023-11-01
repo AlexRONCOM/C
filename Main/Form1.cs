@@ -156,7 +156,7 @@ namespace Main
             sipPassInvalidChar.Visible = false;
             sipPassMinError.Visible = false;
 
-            
+            //just a test
         }
     }
 }
