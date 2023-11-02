@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Main
 {
@@ -94,7 +95,7 @@ namespace Main
         {
            char[] onlynumb = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
-            foreach(char number  in onlynumb)
+            foreach (char number in onlynumb)
             {
                 if (char.IsDigit(number))
                 {
@@ -127,6 +128,34 @@ namespace Main
 
         // Sign Up Button (Panel) //
 
+        private bool CheckPassword(string text)
+        {
+
+            // TBC
+            int digit = 0, up = 0, down = 0;
+            int len = text.Length;
+
+            for(int i = 0; i < len; i++)
+            {
+                char let = text[i];
+
+                if (char.IsDigit(let))
+                    digit =+ 1;
+
+                if (char.IsUpper(let))
+                    up += 1;
+
+                if(char.IsLower(let))
+                    down += 1;
+            }
+
+            if (digit + up + down != 3)
+                return false;
+
+
+            return true;
+        }
+
         private void sipSignUpButton_Click(object sender, EventArgs e)
         {
 
@@ -148,14 +177,6 @@ namespace Main
             {
                 sipEmailMinCharError.Visible = false;
                 sipMessageErrorEmail.Visible = true;
-                return;
-            }
-
-            if(!OnlyNumbers(sipEmailBox.Text) && CheckEmail(sipEmailBox.Text) == true)
-            {
-                sipEmailMinCharError.Visible = false;
-                sipMessageErrorEmail.Visible = false;
-                MessageBox.Show("Adresa de E-Mail nu poate fi formata doar din numbere.");
                 return;
             }
 
