@@ -92,16 +92,16 @@ namespace Main
         }
         private bool OnlyNumbers(string text)
         {
-           /* char[] onlynumb = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+           char[] onlynumb = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
             foreach(char number  in onlynumb)
             {
-                for (int i = 0; i < text.Length; i++)
+                if (char.IsDigit(number))
                 {
-                   
+                    return false;
                 }
             }
-           */
+           
             return true;
         }
 
@@ -151,12 +151,18 @@ namespace Main
                 return;
             }
 
+            if(!OnlyNumbers(sipEmailBox.Text) && CheckEmail(sipEmailBox.Text) == true)
+            {
+                sipEmailMinCharError.Visible = false;
+                sipMessageErrorEmail.Visible = false;
+                MessageBox.Show("Adresa de E-Mail nu poate fi formata doar din numbere.");
+                return;
+            }
+
             sipMessageErrorEmail.Visible = false;
             sipEmailMinCharError.Visible = false;
             sipPassInvalidChar.Visible = false;
             sipPassMinError.Visible = false;
-
-            //just a test
         }
     }
 }
