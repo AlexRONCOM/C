@@ -115,7 +115,7 @@
             this.sipEmailMinCharError.AutoSize = true;
             this.sipEmailMinCharError.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sipEmailMinCharError.ForeColor = System.Drawing.Color.DeepPink;
-            this.sipEmailMinCharError.Location = new System.Drawing.Point(246, 335);
+            this.sipEmailMinCharError.Location = new System.Drawing.Point(246, 337);
             this.sipEmailMinCharError.Name = "sipEmailMinCharError";
             this.sipEmailMinCharError.Size = new System.Drawing.Size(237, 13);
             this.sipEmailMinCharError.TabIndex = 7;
