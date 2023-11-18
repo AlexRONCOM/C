@@ -6,6 +6,8 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private Form2 form2Instance;
+
 
         /// <summary>
         /// Clean up any resources being used.
@@ -29,7 +31,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
-            this.sipSUPanel = new System.Windows.Forms.Panel();
             this.sipEmailIcon = new System.Windows.Forms.PictureBox();
             this.sipPassIcon = new System.Windows.Forms.PictureBox();
             this.sipEmailBox = new System.Windows.Forms.TextBox();
@@ -39,25 +40,17 @@
             this.sipPassMinError = new System.Windows.Forms.Label();
             this.sipPassInvalidChar = new System.Windows.Forms.Label();
             this.sipSignUpButton = new System.Windows.Forms.Button();
+            this.sipShowPass = new System.Windows.Forms.PictureBox();
+            this.sipSUbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sipEmailIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sipPassIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sipShowPass)).BeginInit();
             this.SuspendLayout();
-            // 
-            // sipSUPanel
-            // 
-            this.sipSUPanel.BackColor = System.Drawing.Color.Transparent;
-            this.sipSUPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.sipSUPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sipSUPanel.Location = new System.Drawing.Point(390, 480);
-            this.sipSUPanel.Name = "sipSUPanel";
-            this.sipSUPanel.Size = new System.Drawing.Size(72, 13);
-            this.sipSUPanel.TabIndex = 0;
-            this.sipSUPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sipSUPanel_Paint);
             // 
             // sipEmailIcon
             // 
             this.sipEmailIcon.Image = ((System.Drawing.Image)(resources.GetObject("sipEmailIcon.Image")));
-            this.sipEmailIcon.Location = new System.Drawing.Point(249, 314);
+            this.sipEmailIcon.Location = new System.Drawing.Point(249, 312);
             this.sipEmailIcon.Name = "sipEmailIcon";
             this.sipEmailIcon.Size = new System.Drawing.Size(17, 17);
             this.sipEmailIcon.TabIndex = 1;
@@ -163,12 +156,40 @@
             this.sipSignUpButton.UseVisualStyleBackColor = false;
             this.sipSignUpButton.Click += new System.EventHandler(this.sipSignUpButton_Click);
             // 
+            // sipShowPass
+            // 
+            this.sipShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.sipShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sipShowPass.Image = ((System.Drawing.Image)(resources.GetObject("sipShowPass.Image")));
+            this.sipShowPass.Location = new System.Drawing.Point(493, 360);
+            this.sipShowPass.Name = "sipShowPass";
+            this.sipShowPass.Size = new System.Drawing.Size(16, 17);
+            this.sipShowPass.TabIndex = 11;
+            this.sipShowPass.TabStop = false;
+            this.sipShowPass.Click += new System.EventHandler(this.sipShowPass_Click);
+            // 
+            // sipSUbutton
+            // 
+            this.sipSUbutton.BackColor = System.Drawing.Color.Transparent;
+            this.sipSUbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sipSUbutton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.sipSUbutton.FlatAppearance.BorderSize = 0;
+            this.sipSUbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.sipSUbutton.Location = new System.Drawing.Point(392, 481);
+            this.sipSUbutton.Name = "sipSUbutton";
+            this.sipSUbutton.Size = new System.Drawing.Size(67, 11);
+            this.sipSUbutton.TabIndex = 12;
+            this.sipSUbutton.UseVisualStyleBackColor = false;
+            this.sipSUbutton.Click += new System.EventHandler(this.sipSUbutton_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.sipSUbutton);
+            this.Controls.Add(this.sipShowPass);
             this.Controls.Add(this.sipSignUpButton);
             this.Controls.Add(this.sipPassInvalidChar);
             this.Controls.Add(this.sipPassMinError);
@@ -178,7 +199,6 @@
             this.Controls.Add(this.sipEmailBox);
             this.Controls.Add(this.sipPassIcon);
             this.Controls.Add(this.sipEmailIcon);
-            this.Controls.Add(this.sipSUPanel);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -188,14 +208,13 @@
             this.Load += new System.EventHandler(this.MainPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sipEmailIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sipPassIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sipShowPass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel sipSUPanel;
         private System.Windows.Forms.PictureBox sipEmailIcon;
         private System.Windows.Forms.PictureBox sipPassIcon;
         private System.Windows.Forms.TextBox sipEmailBox;
@@ -205,6 +224,8 @@
         private System.Windows.Forms.Label sipPassMinError;
         private System.Windows.Forms.Label sipPassInvalidChar;
         private System.Windows.Forms.Button sipSignUpButton;
+        private System.Windows.Forms.PictureBox sipShowPass;
+        private System.Windows.Forms.Button sipSUbutton;
     }
 }
 

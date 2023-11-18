@@ -26,10 +26,17 @@ namespace Main
             sipPassInvalidChar.Visible = false;
             sipPassMinError.Visible = false;
 
+
             sipSignUpButton.FlatStyle = FlatStyle.Flat;
             sipSignUpButton.BackColor = Color.Transparent;
             sipSignUpButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
             sipSignUpButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+
+            sipSUbutton.FlatStyle = FlatStyle.Flat;
+            sipSUbutton.BackColor = Color.Transparent;
+            sipSUbutton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            sipSUbutton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+
         }
 
         private void MainPage_Load(object sender, EventArgs e)
@@ -47,14 +54,9 @@ namespace Main
 
         }
 
-        private void sipSUPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void sipPassBox_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void sipEmailBox_TextChanged(object sender, EventArgs e)
@@ -118,12 +120,12 @@ namespace Main
 
         private void sipPassInvalidChar_Click(object sender, EventArgs e)
         {
-
+            //
         }
 
         private void sipPassMinError_Click(object sender, EventArgs e)
         {
-
+            //
         }
 
         // Sign Up Button (Panel) //
@@ -180,10 +182,45 @@ namespace Main
                 return;
             }
 
+            if(sipPassBox.Text.Length < 3)
+            {
+                sipPassMinError.Visible = true;
+                sipPassInvalidChar.Visible = false;
+                sipMessageErrorEmail.Visible = false;
+                sipEmailMinCharError.Visible = false;
+                return;
+            }
+
             sipMessageErrorEmail.Visible = false;
             sipEmailMinCharError.Visible = false;
             sipPassInvalidChar.Visible = false;
             sipPassMinError.Visible = false;
+        }
+
+        private void sipShowPass_Click(object sender, EventArgs e)
+        {
+            if (sipPassBox.PasswordChar == '*')
+            {
+                sipPassBox.PasswordChar = '\0';
+                return;
+            }
+            
+            if(sipPassBox.PasswordChar == '\0')
+            {
+                sipPassBox.PasswordChar = '*';
+                return;
+            }
+        }
+
+        private void sipSUbutton_Click(object sender, EventArgs e)
+        {
+            // MainPage SignUpPage = new MainPage();
+            //SignUpPage.Show();
+
+            form2Instance = new Form2();
+
+            form2Instance.Show();
+
         }
     }
 }
