@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 namespace Main
 {
     public partial class MainPage : Form
-    {
+    { 
         public MainPage()
         {
             InitializeComponent();
@@ -217,10 +217,10 @@ namespace Main
             // MainPage SignUpPage = new MainPage();
             //SignUpPage.Show();
 
-            form2Instance = new Form2();
+                form2Instance = new SignUpPage();
 
-            form2Instance.Show();
-
+                form2Instance.Show();
+                this.Hide();
         }
     }
 }

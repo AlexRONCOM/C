@@ -6,7 +6,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private Form2 form2Instance;
+        private SignUpPage form2Instance;
 
 
         /// <summary>
