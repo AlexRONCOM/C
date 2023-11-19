@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpPage));
             this.supSignUpButton = new System.Windows.Forms.Button();
             this.supSIbutton = new System.Windows.Forms.Button();
+            this.NameBox = new System.Windows.Forms.TextBox();
+            this.EmailBox = new System.Windows.Forms.TextBox();
+            this.PasswordBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // supSignUpButton
@@ -61,6 +64,37 @@
             this.supSIbutton.UseVisualStyleBackColor = false;
             this.supSIbutton.Click += new System.EventHandler(this.supSIbutton_Click);
             // 
+            // NameBox
+            // 
+            this.NameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NameBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameBox.Location = new System.Drawing.Point(273, 265);
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(210, 18);
+            this.NameBox.TabIndex = 14;
+            this.NameBox.TextChanged += new System.EventHandler(this.NameBox_TextChanged);
+            // 
+            // EmailBox
+            // 
+            this.EmailBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EmailBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailBox.Location = new System.Drawing.Point(273, 312);
+            this.EmailBox.Name = "EmailBox";
+            this.EmailBox.Size = new System.Drawing.Size(210, 18);
+            this.EmailBox.TabIndex = 15;
+            this.EmailBox.TextChanged += new System.EventHandler(this.EmailBox_TextChanged);
+            // 
+            // PasswordBox
+            // 
+            this.PasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordBox.Location = new System.Drawing.Point(273, 359);
+            this.PasswordBox.Name = "PasswordBox";
+            this.PasswordBox.PasswordChar = '*';
+            this.PasswordBox.Size = new System.Drawing.Size(210, 18);
+            this.PasswordBox.TabIndex = 16;
+            this.PasswordBox.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
+            // 
             // SignUpPage
             // 
             this.AllowDrop = true;
@@ -68,8 +102,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.PasswordBox);
+            this.Controls.Add(this.EmailBox);
+            this.Controls.Add(this.NameBox);
             this.Controls.Add(this.supSIbutton);
             this.Controls.Add(this.supSignUpButton);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignUpPage";
@@ -77,6 +115,7 @@
             this.Text = "SignUpPage";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,5 +123,8 @@
 
         private System.Windows.Forms.Button supSignUpButton;
         private System.Windows.Forms.Button supSIbutton;
+        private System.Windows.Forms.TextBox NameBox;
+        private System.Windows.Forms.TextBox EmailBox;
+        private System.Windows.Forms.TextBox PasswordBox;
     }
 }

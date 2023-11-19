@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +39,11 @@ namespace Main
             supSIbutton.FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
 
+        void CheckName(char[] name)
+        {
+            //TBC
+        }
+
         private void Form2_Load(object sender, EventArgs e)
         {
 
@@ -53,6 +59,21 @@ namespace Main
             MainPage main = new MainPage();
             main.Show();
             this.Hide();
+        }
+
+        private void NameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmailBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

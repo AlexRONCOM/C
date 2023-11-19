@@ -199,6 +199,7 @@
             this.Controls.Add(this.sipEmailBox);
             this.Controls.Add(this.sipPassIcon);
             this.Controls.Add(this.sipEmailIcon);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
